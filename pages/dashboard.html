@@ -18,7 +18,7 @@
         <a class="nav-link active" href="dashboard.html">Início</a>
         <a class="nav-link" href="agendamento.html">Consultas</a>
         <a class="nav-link" href="gamificacao.html">Gamificação</a>
-        <a class="nav-link text-danger-hover fw-bold" href="../index.html">Sair</a>
+        <a class="nav-link" href="#" onclick="sairSistema()">Sair</a>
       </div>
     </div>
   </nav>
@@ -63,25 +63,40 @@
     </div>
   </div>
 
-  <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1055;">
-    <div id="toastLogin" class="toast align-items-center text-white bg-success border-0 shadow" role="alert" aria-live="assertive" aria-atomic="true" style="border-radius: 10px;">
-      <div class="d-flex">
-        <div class="toast-body fw-bold">
-          🎉 Login realizado com sucesso! Bem-vindo de volta.
-        </div>
-        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-    </div>
-  </div>
-
   <footer class="bg-white text-center py-2 mt-auto border-top">
     <div class="container">
       <p class="text-muted mb-0 small">&copy; 2026 Saudável Mente - Care Plus Digital. Todos os direitos reservados.</p>
       <small class="text-secondary d-block mt-1">Desenvolvido para o Challenge FIAP - RM 567002 - RM 567535</small>
     </div>
   </footer>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/saudavelMente.js"></script>
+
+  <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1055;">
+
+    <div id="liveToast"
+      class="toast align-items-center text-white bg-success border-0 shadow"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      style="border-radius: 12px;">
+
+      <div class="d-flex">
+
+        <div class="toast-body fw-semibold" id="toastMessage">
+          🎉 Login realizado com sucesso! Bem-vindo de volta.
+        </div>
+
+        <button type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast">
+        </button>
+    </div>
+
+  </div>
+
+</div>
 </body>
 </html>

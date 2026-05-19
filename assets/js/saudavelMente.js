@@ -1,39 +1,65 @@
-function realizarLogin() {
-  const email = document.getElementById('email')?.value;
-  if (!email) {
-    alert("Por favor, insira seu e-mail ou CPF.");
-    return false;
+function mostrarToast(mensagem) {
+
+  const toastElement = document.getElementById("liveToast");
+  const toastMessage = document.getElementById("toastMessage");
+
+  if (!toastElement || !toastMessage) {
+    return;
   }
-  window.location.href = "pages/dashboard.html";
+
+  toastMessage.innerText = mensagem;
+
+  const toast = new bootstrap.Toast(toastElement);
+
+  toast.show();
 }
 
-function confirmarPresenca() {
-  if (confirm("Deseja confirmar sua presença para a consulta de Cardiologia?")) {
-    alert("Presença confirmada com sucesso! 🎉\nVocê ganhou +10 pontos de fidelidade Care Plus.");
+function realizarLogin() {
+
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+
+  if (!email || !senha) {
+    alert("Preencha email e senha.");
+    return;
   }
+
+  localStorage.setItem(
+    "toastMensagem",
+    "🎉 Login realizado com sucesso! Bem-vindo de volta."
+  );
+
+  window.location.href = "./pages/dashboard.html";
 }
 
 function confirmarAgendamento() {
-  const especialidade = document.querySelector('select')?.value || "Não informada";
-  alert(`Agendamento realizado com sucesso! 📅\n\nEspecialidade: ${especialidade}\nRecompensa: +50 pontos ganhos!\n\nSeu Avatar da Saúde evoluiu!`);
+
+  localStorage.setItem(
+    "toastMensagem",
+    "📅 Agendamento realizado! Você ganhou +50 pontos."
+  );
+
   window.location.href = "dashboard.html";
 }
 
-function completarDesafioAgua() {
-  alert("Parabéns! Você registrou 8 copos de água hoje. 💧\nStreak de Saúde mantido! (+40 pontos)");
+function sairSistema() {
+
+  localStorage.setItem(
+    "toastMensagem",
+    "👋 Você saiu da conta."
+  );
+
+  window.location.href = "../index.html";
 }
 
-function calcularPercurso() {
-  alert("Analisando trânsito... 🚦\n\nO tempo estimado de percurso é de 40 minutos. \nSugerimos sair às 13:10 para chegar com antecedência e ganhar seus pontos!");
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-document.addEventListener("DOMContentLoaded", () => {
-  const toastEl = document.getElementById('toastLogin');
-  if (toastEl) {
-    new bootstrap.Toast(toastEl, { delay: 4000 }).show();
-  }
+  const mensagem = localStorage.getItem("toastMensagem");
 
-  if (window.location.pathname.includes("agendamento.html")) {
-    console.log("Sistema Saudável Mente: Analisando trânsito para Vila Olímpia...");
+  if (mensagem) {
+
+    mostrarToast(mensagem);
+
+    localStorage.removeItem("toastMensagem");
   }
 });

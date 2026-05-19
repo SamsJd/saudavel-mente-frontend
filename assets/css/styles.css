@@ -38,3 +38,15 @@ footer {
 .display-4 {
   filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
 }
+
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.card {
+  border-radius: 18px !important;
+}
