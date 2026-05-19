@@ -1,79 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gamificação - Saudável Mente</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💚</text></svg>">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💚</text></svg>">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
-<body class="bg-light">
 
+<body class="bg-light d-flex flex-column vh-100">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="dashboard.html">Care Plus Digital</a>
-      <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="dashboard.html">Home</a>
-        <a class="nav-link" href="agendamento.html">Consultas</a>
-        <a class="nav-link active" href="gamificacao.html">Gamificação</a>
-        <a class="nav-link"  href="#" onclick="sairSistema()">Sair</a>
+      <a class="navbar-brand fw-bold" href="dashboard.html">
+        Care Plus Digital
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar"
+        aria-controls="menuNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuNavbar">
+        <div class="navbar-nav ms-auto fw-bold">
+          <a class="nav-link" href="dashboard.html">
+            Início
+          </a>
+          <a class="nav-link" href="agendamento.html">
+            Consultas
+          </a>
+          <a class="nav-link active" href="gamificacao.html">
+            Gamificação
+          </a>
+          <a class="nav-link" href="#" onclick="sairSistema()">
+            Sair
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <div class="container my-4 text-center">
-    <h2 class="mb-4">Minhas Conquistas 🏆</h2>
-    
+  <main class="container my-4 text-center flex-grow-1">
+    <h2 class="mb-4">
+      Minhas Conquistas 🏆
+    </h2>
+
     <div class="row">
       <div class="col-6 col-md-3 mb-4">
-        <div class="card p-3 border-0 shadow-sm h-100">
-          <div class="display-4">🌱</div>
-          <p class="fw-bold mt-2 mb-0">Iniciante</p>
-          <small class="text-muted">1ª Consulta</small>
+        <div class="card card-glass p-3 border-0 shadow-sm h-100">
+          <div class="display-4">
+            🌱
+          </div>
+          <p class="fw-bold mt-2 mb-0">
+            Iniciante
+          </p>
+          <small class="text-muted">
+            1ª Consulta
+          </small>
         </div>
       </div>
+
       <div class="col-6 col-md-3 mb-4">
-        <div class="card p-3 border-0 shadow-sm h-100">
-          <div class="display-4">🌅</div>
-          <p class="fw-bold mt-2 mb-0">Madrugador</p>
-          <small class="text-muted">Consulta antes das 10h</small>
+        <div class="card card-glass p-3 border-0 shadow-sm h-100">
+          <div class="display-4">
+            🌅
+          </div>
+          <p class="fw-bold mt-2 mb-0">
+            Madrugador
+          </p>
+          <small class="text-muted">
+            Consulta antes das 10h
+          </small>
         </div>
       </div>
+
       <div class="col-6 col-md-3 mb-4 opacity-50">
-        <div class="card p-3 border-0 shadow-sm h-100">
-          <div class="display-4">🔥</div>
-          <p class="fw-bold mt-2 mb-0">Persistente</p>
-          <small class="text-muted">Bloqueado</small>
+        <div class="card card-glass p-3 border-0 shadow-sm h-100">
+          <div class="display-4">
+            🔥
+          </div>
+          <p class="fw-bold mt-2 mb-0">
+            Persistente
+          </p>
+          <small class="text-muted">
+            Bloqueado
+          </small>
         </div>
       </div>
+
       <div class="col-6 col-md-3 mb-4 opacity-50">
-        <div class="card p-3 border-0 shadow-sm h-100">
-          <div class="display-4">👑</div>
-          <p class="fw-bold mt-2 mb-0">Lenda</p>
-          <small class="text-muted">Bloqueado</small>
+        <div class="card card-glass p-3 border-0 shadow-sm h-100">
+          <div class="display-4">
+            👑
+          </div>
+          <p class="fw-bold mt-2 mb-0">
+            Lenda
+          </p>
+          <small class="text-muted">
+            Bloqueado
+          </small>
         </div>
       </div>
     </div>
 
-    <div class="card shadow-sm p-2 mt-2">
-      <h4 class="text-primary mb-3">Ranking de Responsabilidade</h4>
-      <div class="progress mb-2" style="height: 25px;">
-        <div class="progress-bar bg-success w-75" role="progressbar">Você está no Top 25%!</div>
+    <div class="card card-glass shadow-sm p-4 mt-2 border-0">
+      <h4 class="text-primary mb-3">
+        Ranking de Responsabilidade
+      </h4>
+      <div class="progress mb-3" style="height: 25px;">
+        <div class="progress-bar bg-success w-75" role="progressbar">
+          Você está no Top 25%!
+        </div>
       </div>
-      <p class="small text-muted">Continue comparecendo para subir no ranking e ganhar mais descontos.</p>
+      <p class="small text-muted mb-0">
+        Continue comparecendo para subir no ranking
+        e ganhar mais descontos.
+      </p>
     </div>
-  </div>
+  </main>
+
+  <footer class="footer-custom text-center py-3 mt-auto border-top">
+    <div class="container">
+      <p class="text-muted mb-0 small">
+        &copy; 2026 Saudável Mente - Care Plus Digital. Todos os direitos reservados.
+      </p>
+      <small class="text-secondary d-block mt-1">
+        Desenvolvido para o Challenge FIAP - RM 567002 - RM 567535
+      </small>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/saudavelMente.js"></script>
+
 </body>
-
-<footer class="bg-white text-center py-2 mt-auto border-top">
-  <div class="container">
-    <p class="text-muted mb-0">&copy; 2026 Saudável Mente - Care Plus Digital. Todos os direitos reservados.</p>
-    <small class="text-secondary">Desenvolvido para o Challenge FIAP - RM 567002 - 567535</small>
-  </div>
-</footer>
-
 </html>

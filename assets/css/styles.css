@@ -1,5 +1,5 @@
 :root {
-  --azul-care-plus: #004a99;
+  --azul-care-plus: #2194d6c0;
   --verde-sucesso: #28a745;
 }
 
@@ -14,7 +14,11 @@ body {
 }
 
 body, .bg-light {
-  background-color: #cceee9 !important;
+  background-image: url("../img/fundo-saude2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .bg-primary, .btn-primary {
@@ -35,6 +39,11 @@ footer {
   color: #6c757d;
 }
 
+.footer-custom {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+}
+
 .display-4 {
   filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
 }
@@ -49,4 +58,11 @@ footer {
 
 .card {
   border-radius: 18px !important;
+  border: 1px solid #2194d6c0 !important;
+}
+
+.card-glass {
+  background-color: rgba(255, 255, 255, 0.644) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
