@@ -30,5 +30,5 @@ O **Saudável Mente** é uma solução inovadora desenvolvida para o Challenge F
 ```
 
 ##  👥 Integrantes
-- **Sâmara Jeise Dias** - RM 567002
 - **Elias Nunes** - RM 567535
+- **Sâmara Jeise Dias** - RM 567002
