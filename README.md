@@ -27,7 +27,8 @@ O **Saudável Mente** é uma solução inovadora desenvolvida para o Challenge F
 │   └── gamificacao.html    # Tela de recompensas e mini-games
 ├── index.html              # Tela de Login (Raiz do projeto)
 └── README.md               # Documentação do repositório
+```
 
-## 👥 Integrantes
+##  👥 Integrantes
 - **Sâmara Jeise Dias** - RM 567002
 - **Elias Nunes** - RM 567535
