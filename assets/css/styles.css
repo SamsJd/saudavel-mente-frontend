@@ -1,46 +1,40 @@
-/* assets/css/styles.css */
-
-/* 1. Cores Personalizadas (Azul Care Plus) */
 :root {
-  --azul-care-plus: #004a99; /* Exemplo de tom de azul da marca */
+  --azul-care-plus: #004a99;
   --verde-sucesso: #28a745;
 }
 
-/* Sobrescrevendo a cor padrão do Bootstrap para os botões e Navbar */
-.bg-primary, .btn-primary {
-  background-color: var(--azul-care-plus) !important;
-  border-color: var(--azul-care-plus) !important;
-}
-
-/* 2. Estilo dos Cards de Gamificação */
-.card {
-  transition: transform 0.2s; /* Efeito suave ao passar o mouse */
-}
-
-.card:hover {
-  transform: scale(1.02); /* Dá um leve zoom quando o usuário passa o mouse */
-}
-
-/* 3. Customização do Footer */
-footer {
-  font-size: 0.9rem;
-  color: #6c757d;
-}
-
-/* 4. Estilo para as Badges (Medalhas) */
-.display-4 {
-  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
-}
-
-/* assets/css/styles.css */
 html, body {
   height: 100%;
   margin: 0;
 }
 
-/* Isso garante que o container principal cresça, 
-   mas o footer fique sempre no limite inferior */
 body {
   display: flex;
   flex-direction: column;
+}
+
+body, .bg-light {
+  background-color: #cceee9 !important;
+}
+
+.bg-primary, .btn-primary {
+  background-color: var(--azul-care-plus) !important;
+  border-color: var(--azul-care-plus) !important;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+footer {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.display-4 {
+  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
 }
